@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/back" />
+
+    <RelativeLayout
+        android:id="@+id/videoviewholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-70dp" >
+
+        <com.baidu.cyberplayer.core.BVideoView
+            android:id="@+id/video_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/controlbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#CC666666"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@android:drawable/divider_horizontal_dark" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="4dip" >
+
+            <ImageButton
+                android:id="@+id/play_btn"
+                android:layout_width="50dip"
+                android:layout_height="40dip"
+                android:layout_gravity="center_vertical"
+                android:background="#00000000"
+                android:src="@drawable/pause_btn_style" />
+
+            <TextView
+                android:id="@+id/time_current"
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dip"
+                android:paddingRight="4dip"
+                android:paddingTop="4dip"
+                android:text="00:00"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/media_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dip"
+                android:layout_height="30dip"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/time_total"
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dip"
+                android:paddingRight="4dip"
+                android:paddingTop="4dip"
+                android:text="00:00"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/play_fullscreen"
+                android:layout_width="50dip"
+                android:layout_height="40dip"
+                android:layout_gravity="center_vertical"
+                android:background="#00000000"
+                android:src="@drawable/bvideo_full_button" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
